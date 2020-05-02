@@ -31,15 +31,11 @@ class AnimalController extends Controller
 
         if (!empty($_POST)) {
             $animal = array_splice($_POST, 0, 6);
-            $options = $_POST["options"];
+
 
             $this->dbInterface->save($animal, 'animal');
-            $animalId = $this->AnimalModel->findOneBy(["nom" => $animal["nom"]]);
-            $animalId = $animalId->id;
 
-            foreach ($options as $option) {
-                $this->dbInterface->save(["option_id" => $option, "animal_id" => $animalId], 'optionsAnimal');
-            }
+
             return $this->redirectToRoute('homeAnimalAdmin');
 
         }
@@ -66,8 +62,8 @@ class AnimalController extends Controller
 
     public function delete()
     {
-
-        return $this->redirectToRoute('homeAnimal');
+        $this->dbInterface->delete('animal', $_GET["id"]);
+        return $this->redirectToRoute('homeAnimalAdmin');
     }
 
     public function reservation (){

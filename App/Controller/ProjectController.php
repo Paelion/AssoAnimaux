@@ -82,4 +82,20 @@ class ProjectController extends Controller
         return $this->render("admin/product/singleProductAdminView", ['product' => $product]);
     }
 
+    public function dons()
+    {
+
+       if (!empty($_POST)) {
+            $dons = array_splice($_POST, 0, 6);
+
+            $this->dbInterface->save($dons, 'dons');
+
+            return $this->redirectToRoute('dons');
+
+        }
+
+        return $this->render("dons/landingDons");
+
+    }
+
 }

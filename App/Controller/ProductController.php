@@ -35,8 +35,6 @@ class ProductController extends Controller
             $product = array_splice($_POST, 0, 6);
 
             $this->dbInterface->save($product, 'product');
-            $productId = $this->ProductModel->findOneBy(["nom" => $product["nom"]]);
-            $productId = $productId->id;
 
             return $this->redirectToRoute('homeProductAdmin');
 
@@ -64,8 +62,9 @@ class ProductController extends Controller
 
     public function deleteProduct()
     {
+        $this->dbInterface->delete('product', $_GET["id"]);
+        return $this->redirectToRoute('homeProductAdmin');
 
-        return $this->redirectToRoute('homeProduct');
     }
 
 }

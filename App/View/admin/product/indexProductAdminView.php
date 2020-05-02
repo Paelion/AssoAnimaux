@@ -17,7 +17,7 @@
                     <p>Stock: <?= $product->stock ?></p>
 
                 </div>
-                <a href="index.php?page=singleProductAdmin&id=<?= $product->id ?>" class="btn btn-primary">Voir le produit</a>
+                <a href="index.php?page=singleProductAdmin&id=<?= $product->id ?>" class="btn btn-success">Voir le produit</a>
             </div>
         </div>
     <?php endforeach ?>

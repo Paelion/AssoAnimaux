@@ -58,6 +58,25 @@
             </div>
         <?php endfor ?>
     </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h2 style="color: #9ACD32">Faire un Don</h2><br>
+
+
+        <form action="index.php?page=dons" method="POST">
+            <div class="form-group">
+                <label for="nom">Nom</label>
+                <input type="text" class="form-control" id="nom" name="nom">
+            </div>
+            <div class="form-group">
+                <label for="montant">Montant</label>
+                <input type="text" class="form-control" id="montant" name="montant">
+            </div>
+            <button type="submit" class="btn btn-primary">Enregistrer</button>
+        </form>
+
 </div>
 
 

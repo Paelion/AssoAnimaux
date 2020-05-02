@@ -91,6 +91,10 @@ elseif (isset($_GET["page"]) && $_GET["page"] == 'singleProductAdmin') {
     $controller = new ProjectController();
     $controller->singleProductAdmin();
 
+} elseif (isset($_GET["page"]) && $_GET["page"] == 'dons') {
+    $controller = new ProjectController();
+    $controller->dons();
+
 }
 
 

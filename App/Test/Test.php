@@ -44,12 +44,10 @@ class Test
 
         $db->createTable('dons',
             ["id" => "INT PRIMARY KEY NOT NULL AUTO_INCREMENT",
-                "user_id" => "INT NOT NULL",
-                "animal_id" => "INT NOT NULL",
+                "nom" => "VARCHAR(100) NOT NULL",
+                "montant" => 'VARCHAR(100) NOT NULL',
                 "date" => 'DATETIME NOT NULL'
-            ],
-            ['user_id' => 'user(id)',
-                'animal_id' => 'animal(id)']
+            ]
         );
 
         $db->createTable('commande',

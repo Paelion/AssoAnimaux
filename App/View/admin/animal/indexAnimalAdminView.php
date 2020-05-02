@@ -17,7 +17,7 @@
                     <p>Age: <?= $animal->age ?>an(s)</p>
 
                 </div>
-                <a href="index.php?page=singleAnimalAdmin&id=<?= $animal->id ?>" class="btn btn-primary">Voir l'animal</a>
+                <a href="index.php?page=singleAnimalAdmin&id=<?= $animal->id ?>" class="btn btn-success">Voir l'animal</a>
             </div>
         </div>
     <?php endforeach ?>

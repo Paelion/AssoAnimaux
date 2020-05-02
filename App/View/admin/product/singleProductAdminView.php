@@ -14,7 +14,7 @@
                 <p>Stock: <?= $product->stock ?></p>
             </div>
             <a href="index.php?page=modifyProduct&id=<?= $product->id ?>" class="btn btn-primary">Modifier</a>
-            <a href=".index.php?page=deleteProduct&id=<?= $product->id ?>" class="btn btn-danger">Supprimer</a>
+            <a href="index.php?page=deleteProduct&id=<?= $product->id ?>" class="btn btn-danger">Supprimer</a>
         </div>
     </div>
 </div>
