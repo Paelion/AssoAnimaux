@@ -74,9 +74,12 @@
                 <label for="montant">Montant</label>
                 <input type="text" class="form-control" id="montant" name="montant">
             </div>
-            <button type="submit" class="btn btn-primary">Enregistrer</button>
+            <button type="submit" class="btn btn-success">Enregistrer le don</button>
         </form>
-
+    <br>
+    <br>
+    <br>
+    <br>
 </div>
 
 
