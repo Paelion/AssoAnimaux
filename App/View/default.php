@@ -26,12 +26,18 @@
         </li>
         <?php if (!isset($_SESSION["user"])): ?>
             <li class="nav-item">
+                <a class="nav-link" href="index.php?page=panierAccess">Panier</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" href="index.php?page=signup">Inscription</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="index.php?page=login">Connexion</a>
             </li>
         <?php else: ?>
+            <li class="nav-item">
+                <a class="nav-link" href="index.php?page=homePanier">Panier</a>
+            </li>
             <li class="nav-item">
                 <a class="nav-link" href="index.php?page=logout">Déconnexion</a>
             </li>

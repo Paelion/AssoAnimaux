@@ -2,10 +2,10 @@
 
 use App\Controller\AnimalController;
 use App\Controller\ProductController;
+use App\Controller\CommandeController;
 use App\Controller\UserController;
 use App\Controller\ProjectController;
-use Model\DbInterface;
-use Model\AnimalModel;
+
 
 
 if ((isset($_GET["page"]) && $_GET["page"] == 'home') || !isset($_GET["page"])) {
@@ -95,6 +95,14 @@ elseif (isset($_GET["page"]) && $_GET["page"] == 'singleProductAdmin') {
     $controller = new ProjectController();
     $controller->dons();
 
+}
+elseif (isset($_GET["page"]) && $_GET["page"] == 'homePanier'){
+    $controller = new CommandeController();
+    $controller->homePanier();
+
+}elseif (isset($_GET["page"]) && $_GET["page"] == 'panierAccess'){
+    $controller = new CommandeController();
+    $controller->PanierAccess();
 }
 
 
